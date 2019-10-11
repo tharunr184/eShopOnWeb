@@ -1,5 +1,6 @@
-FROM mcr.microsoft.com/dotnet/core/runtime:2.2 AS runtime
-
+#FROM mcr.microsoft.com/dotnet/core/runtime:2.2 AS runtime
+ARG REPO=mcr.microsoft.com/dotnet/core/runtime-deps
+FROM $REPO:2.2-alpine3.9
 #WORKDIR /src
 
 #COPY Serve.UI.API/Core/Serve.UI.API.Core.csproj Core/
