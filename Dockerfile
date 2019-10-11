@@ -1,4 +1,4 @@
-FROM appsvc/dotnetcore
+FROM mcr.microsoft.com/dotnet/core/runtime:2.2-alpine3.9
 
 #WORKDIR /src
 
@@ -14,7 +14,7 @@ COPY . .
 #RUN rm ./NuGet.Config
 
 #FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine3.9
-#WORKDIR /app
+WORKDIR /app
 #COPY --from=build /app .
 #ENV ASPNETCORE_URLS=http://+:80 DOTNET_RUNNING_IN_CONTAINER=true 
-#ENTRYPOINT ["dotnet", "Serve.UI.API.Host.dll"]
+ENTRYPOINT ["dotnet", "Web.dll"]
