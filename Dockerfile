@@ -19,3 +19,4 @@ WORKDIR /app
 #COPY --from=build /app .
 #ENV ASPNETCORE_URLS=http://+:80 DOTNET_RUNNING_IN_CONTAINER=true 
 ENTRYPOINT ["dotnet", "Web.dll"]
+#Comment
